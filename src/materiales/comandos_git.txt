@@ -5,3 +5,20 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/irmazor/proyecto66.git
 git push -u origin main
+
+AGREGAR Y SUBIR CAMBIOS
+Git status (para comprobar ramas)
+git add . ( para agregar archivos al commit)( git hace seguimiento a archivos con este comando)
+git commit –m “Mensaje”(para un nuevo commit y en “Mensaje va la nota que se quiere)
+git push ( para subir)
+git branch . (en q rama estoy)
+git push origin master  (con rama) 
+
+ REVISAR DIFERENCIAS
+ git diff src/App.java
+
+CLONAR
+PARA CLONAR SE UTILIZA: git clone https://github.com/irmazor/proyectos_equipo_66.git
+
+BAJAR CAMBIOS
+git pull
