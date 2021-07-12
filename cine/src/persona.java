@@ -19,6 +19,22 @@ public class persona {
         return this. nombre;
     }
 
+    public void mostrarDatos() {
+        System.out.print("Cedula = " + this.cedula
+                          + "Nombre = " + this.nombre);
+    }
+
+    public void generarSaludo() {
+        System.out.println("Hola " + this.nombre);
+
+    }
+
+    public void generarSaludo(String saludo) {
+        System.out.println(saludo + "" + nombre);
+
+
+    }
+
 }
    
 
