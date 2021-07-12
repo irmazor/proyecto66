@@ -7,5 +7,14 @@ public class Cliente extends persona implements Tiquete{
         float costoReal = costoBase - 1000;
         return costoReal;
     }
-    
+   
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
+    }
 }
+
+
