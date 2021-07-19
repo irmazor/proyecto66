@@ -6,6 +6,7 @@ public class App {
        
 
         //CLIENTE UNO
+        
         Scanner sca = new Scanner(System.in);
         System.out.println("Ingrese su cédula: ");
         String cedula = sca. nextLine();
@@ -40,12 +41,12 @@ public class App {
                             + clienteDos.getNombre() + "\nNúmero tarjeta: " 
                             + clienteDos.getNumeroTarjeta()
                             + "\nCosto tiquete: " + costoDos);
-
+        
         //PRUEBA DE CONTENEDORES
         System.out.println();
         Prueba pruebaContenedor = new Prueba();
-        //pruebaContenedor.generarLista();
-
+        pruebaContenedor.generarLista();
+        
         // Lista de objetos
         System.out.println("CREACION DE CLIENTES");
         String opcion = "S";
@@ -60,10 +61,14 @@ public class App {
             int id = sca.nextInt();
 
             //Crea objeto cliente
-            Cliente nuevoCliente = new Cliente();
+            /*Cliente nuevoCliente = new Cliente();
             nuevoCliente.setCedula(cedula);
             nuevoCliente.setNombre(nombre);
-            nuevoCliente.setId(id);
+            nuevoCliente.setId(id);*/
+            //OTRA MANERA DE CREAR OBJETOS EN UNA LINEA, SIN REALIZAR LAS 4 LINEAS ANTERIORES
+            Cliente nuevoCliente = new Cliente(cedula, nombre, id);
+
+
 
             //Agregar cliente a la lista
             pruebaContenedor.agregarCliente(nuevoCliente);
@@ -76,7 +81,7 @@ public class App {
 
         pruebaContenedor.mostrarNombreClientes();
         pruebaContenedor.mostrarDatosClientes();
-
+    
 
     }
 }

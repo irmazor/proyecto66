@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Prueba {
@@ -7,6 +8,12 @@ public class Prueba {
 
     public Prueba(){
         listaClientes = new ArrayList<>();
+        try {
+            // Algoritmo
+        } catch(Exception e){
+            // Proceso realizado si ocurre un eror
+        }
+
     }
 
     public void agregarCliente(Cliente pCliente){
@@ -33,27 +40,37 @@ public class Prueba {
     }
 
     public void generarLista() {
-        ArrayList<Integer> listaNumeros = new ArrayList<>();
+        try {
+            ArrayList<Integer> listaNumeros = new ArrayList<>();
 
-        Scanner sca = new Scanner(System.in);
-        int numero = 0;
-        while (numero >= 0) {
-            System.out.println("Ingrese un número(Número negativo para salir): ");
-            numero = sca.nextInt();
-            if (numero >=0) {
-                listaNumeros.add(numero);
+            Scanner sca = new Scanner(System.in);
+            int numero = 0;
+            while (numero >= 0) {
+                System.out.println("Ingrese un número(Número negativo para salir): ");
+                numero = sca.nextInt();
+                if (numero >=0) {
+                    listaNumeros.add(numero);
+                }
             }
+            System.out.println();  
+            //CICLO FOR
+            for (int i = 0; i < listaNumeros.size(); i++) {
+                System.out.println(listaNumeros.get(i));
+               // System.out.println(listaNumeros.get(i+1));
         }
-        System.out.println();  
-        //CICLO FOR
-        for (int i = 0; i < listaNumeros.size(); i++) {
-            System.out.println(listaNumeros.get(i));
-    }
-    // Ciclo for each
-    listaNumeros.forEach((elemento) -> {
-        System.out.println(elemento);
-        // elemento = elemento * 2;
-    });
 
-  }
+        // Ciclo for each
+        listaNumeros.forEach((elemento) -> {
+            System.out.println(elemento);
+            // elemento = elemento * 2;
+        });
+        } catch(InputMismatchException e){
+            System.out.println("Solo se permiten números");
+        } catch(Exception e2) {
+            System.out.println("Se presento error en la lista");
+
+        }finally {
+            System.out.println("Finalizó método");
+       }
+}
 }

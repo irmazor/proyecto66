@@ -2,6 +2,18 @@ public class Cliente extends persona implements Tiquete{
 
     private int id;
 
+    public Cliente () {
+
+    }
+
+    // Constructor sobrecargado
+    public Cliente(String cedula, String nombre, int id) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.id = id;
+    }
+
+
     @Override
     public float calcularCosto (float costoBase) {
         float costoReal = costoBase - 1000;
